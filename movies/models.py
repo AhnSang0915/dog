@@ -1,5 +1,5 @@
 from django.db import models
-from django.forms import CharField, DateField
+
 
 # Create your models here.
 
@@ -17,7 +17,7 @@ class Actors(models.Model):
     last_name = models.CharField(max_length=45)
     date_of_birth = models.DateField(blank=True, null=True)
     movies = models.ManyToManyField(
-        'Movies', relate_name="movies"
+        'Movies', related_name="owo"
         )
 
     class Meta:
